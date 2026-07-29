@@ -1,8 +1,18 @@
 # UPS Menu
 
+![UPS Menu showing live UPS telemetry in the macOS menu bar](screenshoot.png)
+
 UPS Menu is a small native macOS menu-bar application that displays live data from a USB-connected UPS. It has no Dock icon or regular application windows. Click its menu-bar item to see the information popover, then use the sliders button to choose the rows shown and the single value displayed in the menu bar.
 
 UPS Menu reads the device directly with Apple's shared `IOHIDManager` API. It does not install a privileged helper, claim exclusive USB access, connect to a cloud service, or collect analytics.
+
+## Why UPS Menu?
+
+- **Lightweight:** a focused native Swift application without a background service, web runtime, or vendor software suite.
+- **Unobtrusive:** lives only in the menu bar, with no Dock icon or regular application windows.
+- **Clean and configurable:** presents live UPS information in a compact macOS interface and lets you choose which metrics appear.
+- **Private and local:** reads the UPS directly over USB without cloud accounts, analytics, or internet access.
+- **Coexists with other software:** opens the HID device in shared mode instead of claiming exclusive USB access.
 
 ## Available Information
 
