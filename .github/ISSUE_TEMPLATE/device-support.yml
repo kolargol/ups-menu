@@ -1,0 +1,39 @@
+name: UPS device support
+description: Request support for another USB HID UPS model
+title: "[Device support]: "
+labels:
+  - device-support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Run `./build.sh compatibility --diagnostic` with the UPS connected. The command omits USB serial numbers.
+  - type: input
+    id: manufacturer
+    attributes:
+      label: Manufacturer and model
+      placeholder: Example UPS 1000
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: macOS 15.5
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Compatibility diagnostic
+      description: Paste the complete command output. Check it before submitting and remove anything you consider sensitive.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: Describe what the vendor software reports on line power and battery power.
+    validations:
+      required: true
