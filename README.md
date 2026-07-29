@@ -65,7 +65,7 @@ Telemetry is refreshed every five seconds. Missing optional reports are omitted 
 Requirements:
 
 - macOS 14 or later
-- Xcode 26 or a compatible recent Xcode release
+- Xcode 16.4 or later
 - [XcodeGen](https://github.com/yonaskolb/XcodeGen), installable with `brew install xcodegen`
 
 The build script regenerates the Xcode project before every operation:

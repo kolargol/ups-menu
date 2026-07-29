@@ -9,10 +9,16 @@ permissions:
 
 jobs:
   test:
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+      - name: Select Xcode 16.4
+        run: sudo xcode-select --switch /Applications/Xcode_16.4.app/Contents/Developer
       - name: Install XcodeGen
         run: brew install xcodegen
+      - name: Report toolchain
+        run: |
+          xcodebuild -version
+          xcodegen --version
       - name: Run tests
         run: ./build.sh test

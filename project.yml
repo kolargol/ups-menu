@@ -1,5 +1,8 @@
 name: UPSMenu
 options:
+  minimumXcodeGenVersion: 2.45.0
+  xcodeVersion: "16.4"
+  projectFormat: xcode16_0
   bundleIdPrefix: com.local
   deploymentTarget:
     macOS: "14.0"
